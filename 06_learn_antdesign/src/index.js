@@ -6,8 +6,8 @@ import 'moment/locale/zh-hk';
 // import 'antd/dist/antd.css';
 import 'antd/dist/antd.less';
 
-// import App from './App';
-import App from './comment/App';
+import App from './App';
+// import App from './comment/App';
 
 
 ReactDOM.render(
