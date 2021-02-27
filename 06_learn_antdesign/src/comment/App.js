@@ -22,6 +22,7 @@ export default class App extends PureComponent {
                                 removeItem={e => this.removeComment(index)}/>
           })
         }
+        {/* <CommentInput submitComment={info => this.submitComment(info)}/> */}
         <CommentInput submitComment={this.submitComment.bind(this)}/>
       </div>
     )

@@ -16,10 +16,16 @@ export default class CommentInput extends PureComponent {
   render() {
     return (
       <div>
-        <Input.TextArea rows={4} 
-                        value={this.state.content}
-                        onChange={e => this.handleChange(e)}/>
-        <Button type="primary" onClick={e => this.addComment()}>添加评论</Button>
+        <Input.TextArea
+          rows={4}
+          value={this.state.content}
+          onChange={e => this.handleChange(e)} />
+        <Button
+          type="primary"
+          onClick={e => this.addComment()}
+          style={{ marginTop: "10px" }}>
+          添加评论
+        </Button>
       </div>
     )
   }

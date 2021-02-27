@@ -22,7 +22,9 @@ export default class CommentItem extends PureComponent {
           </Tooltip>
         }
         actions={[
-          <span onClick={e => this.removeItem()}><DeleteOutlined />删除</span>
+          <span onClick={e => this.removeItem()}>
+            <DeleteOutlined />删除
+          </span>
         ]}
       />
     )
