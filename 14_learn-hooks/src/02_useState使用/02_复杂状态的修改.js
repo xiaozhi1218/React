@@ -14,6 +14,18 @@ export default function ComplexHookState() {
     setFrineds(friends);
   }
 
+  function randomInteger(min, max) {
+    // here rand is from min to (max+1)
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
+
+  function addFriends() {
+    const newStudents = [...students];
+    newStudents.push({id: randomInteger(222, 999), name: "ccc", age: 30})
+    setStudents(newStudents);
+  }
+
   function incrementAgeWithIndex(index) {
     const newStudents = [...students];
     newStudents[index].age += 1;
@@ -47,6 +59,8 @@ export default function ComplexHookState() {
           })
         }
       </ul>
+      <button onClick={() => addFriends()}>添加一个复杂朋友</button>
+      <button onClick={() => setStudents([...students, {id: randomInteger(222, 999), name: "cyz", age: 999}])}>添加一个复杂朋友</button>
     </div>
   )
 }
