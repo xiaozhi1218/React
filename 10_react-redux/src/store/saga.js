@@ -22,7 +22,7 @@ function* fetchHomeMultidata(action) {
 
 function* mySaga() {
   // takeLatest takeEvery区别:
-  // takeLatest: 依次只能监听一个对应的action
+  // takeLatest: 依次只能监听一个对应的action，多个action只会执行最后一个
   // takeEvery: 每一个都会被执行
   yield all([
     takeLatest(FETCH_HOME_MULTIDATA, fetchHomeMultidata),
