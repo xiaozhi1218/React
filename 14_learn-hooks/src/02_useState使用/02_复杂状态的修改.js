@@ -20,7 +20,7 @@ export default function ComplexHookState() {
     return Math.floor(rand);
   }
 
-  function addFriends() {
+  function addComplexStudents() {
     const newStudents = [...students];
     newStudents.push({id: randomInteger(222, 999), name: "ccc", age: 30})
     setStudents(newStudents);
@@ -59,7 +59,7 @@ export default function ComplexHookState() {
           })
         }
       </ul>
-      <button onClick={() => addFriends()}>添加一个复杂朋友</button>
+      <button onClick={() => addComplexStudents()}>添加一个复杂朋友</button>
       <button onClick={() => setStudents([...students, {id: randomInteger(222, 999), name: "cyz", age: 999}])}>添加一个复杂朋友</button>
     </div>
   )
