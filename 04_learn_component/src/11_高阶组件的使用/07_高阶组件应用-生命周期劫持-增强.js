@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 function withRenderTime(WrappedComponent) {
-  return class extends PureComponent {
+  const enhenceComponent = class extends PureComponent {
     // 即将渲染获取一个时间 beginTime
     UNSAFE_componentWillMount() {
       this.beginTime = Date.now();
@@ -18,6 +18,8 @@ function withRenderTime(WrappedComponent) {
       return <WrappedComponent {...this.props}/>
     }
   }
+  enhenceComponent.displayName = 'enhenceComponent'
+  return enhenceComponent;
 }
 
 class Home extends PureComponent {
