@@ -1,12 +1,14 @@
 import {
   CHANGE_BANNERS,
-  CHANGE_RECOMMEND
+  CHANGE_RECOMMEND,
+  ALBUM_FETCH_SUCCEEDED
 } from './constants.js';
 
 // 拆分homeReducer
 const initialHomeState = {
   banners: [],
-  recommends: []
+  recommends: [],
+  newAlbums: []
 }
 function homeReducer(state = initialHomeState, action) {
   switch (action.type) {
@@ -14,6 +16,8 @@ function homeReducer(state = initialHomeState, action) {
       return { ...state, banners: action.banners };
     case CHANGE_RECOMMEND:
       return { ...state, recommends: action.recommends };
+    case ALBUM_FETCH_SUCCEEDED:
+      return {...state, newAlbums: action.newAlbums}
     default:
       return state;
   }

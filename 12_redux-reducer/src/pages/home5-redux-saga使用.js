@@ -12,9 +12,12 @@ import {
   fetchHomeMultidataAction
 } from '../store/home/actionCreators';
 
+import { ALBUM_FETCH_REQUESTED } from '../store/home/constants';
+
 class Home extends PureComponent {
   componentDidMount() {
     this.props.getHomeMultidata();
+    this.props.getAlbumData(5);
   }
 
   render() {
@@ -42,6 +45,9 @@ const mapDispatchToProps = dispatch => ({
   },
   getHomeMultidata() {
     dispatch(fetchHomeMultidataAction);
+  },
+  getAlbumData(limit) {
+    dispatch({type: ALBUM_FETCH_REQUESTED, payload: {limit}})
   }
 })
 
