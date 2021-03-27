@@ -3,7 +3,10 @@ import axios from 'axios';
 import {
   CHANGE_BANNERS,
   CHANGE_RECOMMEND,
-  FETCH_HOME_MULTIDATA
+  FETCH_HOME_MULTIDATA,
+  ALBUM_FETCH_SUCCEEDED,
+  ALBUM_FETCH_REQUESTED,
+  ALBUM_FETCH_FAILED
 } from './constants.js';
 
 
@@ -36,3 +39,16 @@ export const fetchHomeMultidataAction = {
   type: FETCH_HOME_MULTIDATA
 }
 
+export const albumFetchRequestedAction = (payload) => ({
+  type: ALBUM_FETCH_REQUESTED,
+  payload
+})
+
+export const albumFetchSucceededAction = (albums) => ({
+  type: ALBUM_FETCH_SUCCEEDED,
+  albums
+})
+
+export const albumFetchFaileddAction = {
+  type: ALBUM_FETCH_FAILED
+}

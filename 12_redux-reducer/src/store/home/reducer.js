@@ -17,7 +17,7 @@ function homeReducer(state = initialHomeState, action) {
     case CHANGE_RECOMMEND:
       return { ...state, recommends: action.recommends };
     case ALBUM_FETCH_SUCCEEDED:
-      return {...state, newAlbums: action.newAlbums}
+      return { ...state, newAlbums: action.albums }
     default:
       return state;
   }

@@ -9,7 +9,8 @@ import {
   addAction
 } from '../store/counter/actionCreators';
 import {
-  fetchHomeMultidataAction
+  fetchHomeMultidataAction,
+  albumFetchRequestedAction
 } from '../store/home/actionCreators';
 
 import { ALBUM_FETCH_REQUESTED } from '../store/home/constants';
@@ -47,7 +48,8 @@ const mapDispatchToProps = dispatch => ({
     dispatch(fetchHomeMultidataAction);
   },
   getAlbumData(limit) {
-    dispatch({type: ALBUM_FETCH_REQUESTED, payload: {limit}})
+    dispatch(albumFetchRequestedAction({limit}))
+    // dispatch({type: ALBUM_FETCH_REQUESTED, payload: {limit}})
   }
 })
 
