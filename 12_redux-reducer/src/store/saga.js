@@ -28,6 +28,7 @@ function* fetchHomeMultidata(action) {
 
 function* fetchAlbum(action) {
   try {
+    yield delay(5000)
     const { albums } = yield call(Api.getNewAlbums, action.payload.limit);
     // yield put({ type: ALBUM_FETCH_SUCCEEDED, newAlbums: res.albums });
     yield put(albumFetchSucceededAction(albums));
