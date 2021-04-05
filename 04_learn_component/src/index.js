@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 // import App from './03_组件间的通信/02_父传子通信-类组件';
 // import App from './03_组件间的通信/03_父传子通信-函数组件';
 // import App from './03_组件间的通信/04_父传子通信-属性验证';
-// import App from './03_组件间的通信/05_子传父通信-函数传递';
+import App from './03_组件间的通信/05_子传父通信-函数传递';
 
 // import App from './04_组件通信案例/App';
 // import './04_组件通信案例/style.css';
@@ -47,7 +47,7 @@ import ReactDOM from 'react-dom';
 // import App from './11_高阶组件的使用/04_高阶组件应用-增强props-改进';
 // import App from './11_高阶组件的使用/05_高阶组件应用-登录鉴权操作';
 // import App from './11_高阶组件的使用/06_高阶组件应用-生命周期劫持-默认';
-import App from './11_高阶组件的使用/07_高阶组件应用-生命周期劫持-增强';
+// import App from './11_高阶组件的使用/07_高阶组件应用-生命周期劫持-增强';
 
 // import App from './12_组件内容补充/01_ref的转发';
 // import App from './12_组件内容补充/02_portals的使用';
