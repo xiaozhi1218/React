@@ -27,6 +27,17 @@
       font-size: 15px;
       color: red;
     `
+    let state = {counter: 0};
+    let _state = JSON.parse(JSON.stringify(state));
+    let _state1 = {...state}
+    let _state2 = Object.assign({}, state)
+    // _state.counter + 1;
+    console.log(`state`, state)
+    console.log(`_state`, _state)
+    console.log(state === _state)
+    console.log(state === _state1)
+    console.log(_state2)
+    console.log(state === _state2)
   </script>
 </body>
 </html>
