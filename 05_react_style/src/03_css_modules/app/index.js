@@ -13,6 +13,7 @@ export default class App extends PureComponent {
         App
         <h2 className={'fs ' + style['app-title']}>我是App的title1</h2>
         <h2 className={`fs ${style['app-title']}`}>我是App的title2</h2>
+        <h2 className={`fs ${style.title}`}>我是App的title3</h2>
         <Home/>
         <Profile/>
       </div>
